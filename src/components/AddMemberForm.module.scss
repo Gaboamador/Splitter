@@ -1,0 +1,95 @@
+@use "@/styles/refs" as *;
+
+.form {
+  display: grid;
+  gap: $space-sm;
+  margin-bottom: $space-md;
+  padding: $space-md;
+
+  background: $color-bg-elevated-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+}
+
+.fields {
+  display: grid;
+  gap: $space-sm;
+
+  @media (min-width: 640px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.field {
+  display: grid;
+  gap: $space-xs;
+
+  span {
+    color: $color-text-secondary;
+    font-size: $font-size-label-sm;
+    font-weight: $font-weight-medium;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.7rem $space-sm;
+
+    color: $color-text-primary;
+
+    background: $color-bg-elevated;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    outline: none;
+
+    transition:
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+
+    &:focus {
+      border-color: rgba($color-accent-primary, 0.72);
+      box-shadow: 0 0 0 3px rgba($color-accent-primary, 0.14);
+    }
+  }
+}
+
+.error {
+  padding: $space-sm;
+
+  color: $color-danger;
+  font-size: $font-size-body-sm;
+
+  background: rgba($color-danger, 0.08);
+  border: 1px solid rgba($color-danger, 0.22);
+  border-radius: $radius-md;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  gap: $space-xs;
+
+  min-height: 40px;
+  padding: $space-xs $space-md;
+
+  color: #ffffff;
+  font-size: $font-size-body-sm;
+  font-weight: $font-weight-bold;
+
+  background: $color-accent-primary;
+  border-radius: $radius-md;
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+
+  &:not(:disabled):hover {
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.68;
+  }
+}

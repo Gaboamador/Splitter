@@ -1,0 +1,93 @@
+@use "@/styles/refs" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: $space-md;
+
+  padding: $space-lg;
+
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-sm;
+
+  @media (min-width: 680px) {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+}
+
+.iconBox {
+  display: grid;
+  width: 44px;
+  height: 44px;
+
+  color: $color-accent-primary;
+
+  background: rgba($color-accent-primary, 0.1);
+  border-radius: $radius-lg;
+
+  place-items: center;
+
+  svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+}
+
+.content {
+  min-width: 0;
+
+  h2 {
+    margin-bottom: $space-2xs;
+
+    color: $color-text-primary;
+    font-size: $font-size-heading-sm;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: $space-xs;
+
+    color: $color-text-secondary;
+    font-size: $font-size-body-sm;
+  }
+}
+
+.meta {
+  color: $color-text-muted;
+  font-size: $font-size-label-sm;
+  font-weight: $font-weight-medium;
+}
+
+.link {
+  display: inline-flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+
+  min-height: 40px;
+  padding: $space-xs $space-md;
+
+  color: $color-accent-primary;
+  font-size: $font-size-body-sm;
+  font-weight: $font-weight-bold;
+
+  background: rgba($color-accent-primary, 0.08);
+  border-radius: $radius-pill;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+
+  &:hover {
+    background: rgba($color-accent-primary, 0.13);
+    transform: translateY(-1px);
+  }
+
+  @media (min-width: 680px) {
+    grid-column: auto;
+  }
+}

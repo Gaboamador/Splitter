@@ -1,0 +1,119 @@
+@use "@/styles/refs" as *;
+
+.page {
+  display: grid;
+  gap: $space-lg;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  padding: $space-lg;
+
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-sm;
+
+  @media (min-width: 720px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin-bottom: $space-xs;
+
+    color: $color-text-primary;
+    font-family: $font-family-display;
+    font-size: $font-size-heading-lg;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    max-width: 620px;
+    color: $color-text-secondary;
+  }
+}
+
+.eyebrow {
+  margin-bottom: $space-xs;
+
+  color: $color-accent-primary !important;
+  font-size: $font-size-label-sm;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.primaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+
+  min-height: 44px;
+  padding: $space-sm $space-md;
+
+  color: #ffffff;
+  font-weight: $font-weight-bold;
+  white-space: nowrap;
+
+  background: $color-accent-primary;
+  border-radius: $radius-md;
+
+  transition: transform 160ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+.groupsGrid {
+  display: grid;
+  gap: $space-md;
+}
+
+.emptyState {
+  display: grid;
+  justify-items: center;
+  gap: $space-sm;
+
+  padding: $space-2xl $space-lg;
+
+  color: $color-text-secondary;
+  text-align: center;
+
+  background: $color-bg-elevated;
+  border: 1px dashed $color-border-strong;
+  border-radius: $radius-xl;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    color: $color-accent-secondary;
+  }
+
+  h2 {
+    color: $color-text-primary;
+    font-size: $font-size-heading-sm;
+  }
+
+  p {
+    max-width: 460px;
+  }
+}
+
+.error {
+  padding: $space-sm $space-md;
+
+  color: $color-danger;
+  font-size: $font-size-body-sm;
+
+  background: rgba($color-danger, 0.08);
+  border: 1px solid rgba($color-danger, 0.22);
+  border-radius: $radius-md;
+}

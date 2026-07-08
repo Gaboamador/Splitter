@@ -1,0 +1,95 @@
+@use "@/styles/refs" as *;
+
+.layout {
+  min-height: 100vh;
+  background: $color-bg-page;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-md;
+
+  min-height: $header-height-sm;
+  padding: $space-sm $container-padding-sm;
+
+  background: rgba($color-bg-elevated, 0.92);
+  border-bottom: 1px solid $color-border;
+  backdrop-filter: blur(14px);
+
+  @media (min-width: 768px) {
+    min-height: $header-height-md;
+    padding-inline: $container-padding-md;
+  }
+}
+
+.brand {
+  color: $color-text-primary;
+  font-family: $font-family-display;
+  font-size: $font-size-heading-sm;
+  font-weight: $font-weight-bold;
+  letter-spacing: -0.03em;
+}
+
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.userName {
+  display: none;
+  max-width: 220px;
+  overflow: hidden;
+
+  color: $color-text-secondary;
+  font-size: $font-size-body-sm;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (min-width: 640px) {
+    display: block;
+  }
+}
+
+.logoutButton {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+
+  padding: $space-xs $space-sm;
+
+  color: $color-text-primary;
+  font-size: $font-size-body-sm;
+  font-weight: $font-weight-medium;
+
+  background: $color-bg-elevated-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-pill;
+
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    background 160ms ease;
+
+  &:hover {
+    border-color: $color-border-strong;
+    background: $color-bg-elevated;
+    transform: translateY(-1px);
+  }
+}
+
+.main {
+  width: min(100%, $page-max-width);
+  margin: 0 auto;
+  padding: $space-lg $container-padding-sm $space-2xl;
+
+  @media (min-width: 768px) {
+    padding-inline: $container-padding-md;
+  }
+}

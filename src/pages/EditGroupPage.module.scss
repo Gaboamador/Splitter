@@ -1,0 +1,195 @@
+@use "@/styles/refs" as *;
+
+.page {
+  display: grid;
+  gap: $space-md;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: $space-xs;
+
+  padding: $space-xs $space-sm;
+
+  color: $color-text-secondary;
+  font-size: $font-size-body-sm;
+  font-weight: $font-weight-bold;
+
+  border-radius: $radius-pill;
+
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+
+  &:hover {
+    color: $color-text-primary;
+    background: $color-bg-elevated-2;
+  }
+}
+
+.card,
+.statusCard,
+.dangerCard {
+  display: grid;
+  gap: $space-md;
+
+  padding: $space-lg;
+
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-sm;
+}
+
+.statusCard {
+  h1 {
+    color: $color-text-primary;
+    font-size: $font-size-heading-md;
+  }
+
+  p {
+    color: $color-text-secondary;
+  }
+}
+
+.header {
+  display: grid;
+  gap: $space-xs;
+  margin-bottom: $space-xs;
+
+  h1 {
+    color: $color-text-primary;
+    font-family: $font-family-display;
+    font-size: $font-size-heading-lg;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  p {
+    color: $color-text-secondary;
+  }
+}
+
+.eyebrow {
+  color: $color-accent-primary !important;
+  font-size: $font-size-label-sm;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.field {
+  display: grid;
+  gap: $space-xs;
+
+  span {
+    color: $color-text-secondary;
+    font-size: $font-size-label-sm;
+    font-weight: $font-weight-medium;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem $space-md;
+
+    color: $color-text-primary;
+
+    background: $color-bg-elevated;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    outline: none;
+
+    transition:
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+
+    &:focus {
+      border-color: rgba($color-accent-primary, 0.72);
+      box-shadow: 0 0 0 3px rgba($color-accent-primary, 0.14);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.error {
+  padding: $space-sm;
+
+  color: $color-danger;
+  font-size: $font-size-body-sm;
+
+  background: rgba($color-danger, 0.08);
+  border: 1px solid rgba($color-danger, 0.22);
+  border-radius: $radius-md;
+}
+
+.submitButton,
+.deleteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+
+  min-height: 44px;
+  padding: $space-sm $space-md;
+
+  color: #ffffff;
+  font-weight: $font-weight-bold;
+
+  border-radius: $radius-md;
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+
+  &:not(:disabled):hover {
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+}
+
+.submitButton {
+  background: $color-accent-primary;
+}
+
+.dangerCard {
+  border-color: rgba($color-danger, 0.22);
+  background:
+    linear-gradient(135deg, rgba($color-danger, 0.06), transparent),
+    $color-bg-elevated;
+
+  h2 {
+    color: $color-text-primary;
+    font-size: $font-size-heading-sm;
+  }
+
+  p {
+    color: $color-text-secondary;
+  }
+}
+
+.dangerEyebrow {
+  margin-bottom: $space-xs;
+
+  color: $color-danger !important;
+  font-size: $font-size-label-sm;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.deleteButton {
+  justify-self: start;
+  background: $color-danger;
+}

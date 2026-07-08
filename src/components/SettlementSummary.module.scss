@@ -1,0 +1,219 @@
+@use "@/styles/refs" as *;
+
+.summary {
+  display: grid;
+  gap: $space-md;
+}
+
+.totalsGrid {
+  display: grid;
+  gap: $space-sm;
+
+  @media (min-width: 560px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.totalCard {
+  display: grid;
+  gap: $space-2xs;
+
+  padding: $space-md;
+
+  background:
+    linear-gradient(135deg, rgba($color-accent-secondary, 0.14), transparent),
+    $color-bg-elevated-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+
+  span {
+    color: $color-text-secondary;
+    font-size: $font-size-label-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  strong {
+    color: $color-text-primary;
+    font-size: $font-size-heading-md;
+    line-height: 1.1;
+  }
+}
+
+.section {
+  display: grid;
+  gap: $space-sm;
+
+  h3 {
+    color: $color-text-primary;
+    font-size: $font-size-body;
+  }
+}
+
+.settledBox {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  padding: $space-md;
+
+  color: $color-success;
+
+  background: rgba($color-success, 0.08);
+  border: 1px solid rgba($color-success, 0.22);
+  border-radius: $radius-lg;
+
+  svg {
+    flex: 0 0 auto;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  p {
+    color: $color-text-secondary;
+    font-size: $font-size-body-sm;
+  }
+}
+
+.settlementsList,
+.balancesList {
+  display: grid;
+  gap: $space-sm;
+}
+
+.settlementItem,
+.balanceItem {
+  padding: $space-sm $space-md;
+
+  background: $color-bg-elevated-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+}
+
+.settlementItem {
+  display: grid;
+  gap: $space-sm;
+
+  span {
+    color: $color-text-secondary;
+    font-size: $font-size-body-sm;
+
+    strong {
+      color: $color-text-primary;
+    }
+  }
+}
+
+.settlementActions {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+
+  > strong {
+    color: $color-accent-primary;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 560px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.paymentLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+
+  min-height: 34px;
+  padding: $space-2xs $space-sm;
+
+  color: $color-accent-secondary;
+  font-size: $font-size-label-sm;
+  font-weight: $font-weight-bold;
+
+  background: rgba($color-accent-secondary, 0.1);
+  border-radius: $radius-pill;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+
+  &:hover {
+    background: rgba($color-accent-secondary, 0.16);
+    transform: translateY(-1px);
+  }
+}
+
+.balanceItem {
+  display: grid;
+  gap: $space-xs;
+
+  @media (min-width: 680px) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  div:first-child {
+    display: grid;
+    gap: $space-2xs;
+    min-width: 0;
+
+    strong,
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    strong {
+      color: $color-text-primary;
+      font-size: $font-size-body-sm;
+    }
+
+    span {
+      color: $color-text-muted;
+      font-size: $font-size-body-xs;
+    }
+  }
+}
+
+.balanceAmount {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  gap: $space-xs;
+
+  padding: $space-2xs $space-xs;
+
+  font-size: $font-size-body-sm;
+
+  border-radius: $radius-pill;
+
+  @media (min-width: 680px) {
+    justify-self: end;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.positive {
+  color: $color-success;
+  background: rgba($color-success, 0.1);
+}
+
+.negative {
+  color: $color-danger;
+  background: rgba($color-danger, 0.1);
+}
+
+.neutral {
+  color: $color-text-muted;
+  background: rgba($color-text-muted, 0.1);
+}

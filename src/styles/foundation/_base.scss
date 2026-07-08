@@ -1,0 +1,36 @@
+@use "../refs" as *;
+
+html {
+  background: $color-bg-page;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: $color-bg-page;
+  color: $color-text-primary;
+  font-family: $font-family-text;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: $font-family-input;
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+
+::selection {
+  background: rgba($color-accent-primary, 0.18);
+}
