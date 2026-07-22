@@ -18,9 +18,11 @@
   min-height: $header-height-sm;
   padding: $space-sm $container-padding-sm;
 
-  background: rgba($color-bg-elevated, 0.92);
-  border-bottom: 1px solid $color-border;
-  backdrop-filter: blur(14px);
+  background: rgba($color-bg-elevated, 0.86);
+  border-bottom: 1px solid rgba($color-border-strong, 0.72);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 
   @media (min-width: 768px) {
     min-height: $header-height-md;
@@ -29,11 +31,23 @@
 }
 
 .brand {
-  color: $color-text-primary;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.05rem;
+
+  color: #dbeafe;
   font-family: $font-family-display;
   font-size: $font-size-heading-sm;
   font-weight: $font-weight-bold;
   letter-spacing: -0.03em;
+}
+
+.brandIcon {
+  display: block;
+  flex: 0 0 auto;
+
+  width: auto;
+  height: 1.8rem;
 }
 
 .userArea {

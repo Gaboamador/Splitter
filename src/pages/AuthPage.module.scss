@@ -4,10 +4,25 @@
   display: grid;
   min-height: 100vh;
   padding: $space-lg $container-padding-sm;
+
   background:
-    radial-gradient(circle at top left, rgba($color-accent-primary, 0.16), transparent 34rem),
-    radial-gradient(circle at bottom right, rgba($color-accent-secondary, 0.18), transparent 28rem),
+    radial-gradient(
+      circle at top left,
+      rgba($color-accent-primary, 0.16),
+      transparent 32rem
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba($color-accent-secondary, 0.12),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 75% 15%,
+      rgba($color-accent-warm, 0.06),
+      transparent 20rem
+    ),
     $color-bg-page;
+
   place-items: center;
 }
 
@@ -15,11 +30,13 @@
   width: min(100%, 440px);
   padding: $space-xl;
 
-  background: rgba($color-bg-elevated, 0.94);
+  background: rgba($color-bg-elevated, 0.92);
   border: 1px solid $color-border;
   border-radius: $radius-xl;
   box-shadow: $shadow-md;
-  backdrop-filter: blur(14px);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .header {
@@ -129,7 +146,7 @@
 }
 
 .primaryButton {
-  color: #ffffff;
+  color: $color-accent-primary-contrast;
   background: $color-accent-primary;
 }
 

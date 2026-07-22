@@ -9,6 +9,7 @@ body,
 }
 
 html {
+  color-scheme: dark;
   scrollbar-gutter: stable;
   background: $color-bg-page;
 }
@@ -20,10 +21,13 @@ html {
 }
 
 body {
-  font-family: $font-family-text;
-  color: $color-text-primary;
   width: 100%;
+
+  color: $color-text-primary;
+  font-family: $font-family-text;
+
   user-select: none;
+
   background: $color-bg-page;
 }
 
@@ -31,7 +35,35 @@ button,
 input,
 textarea,
 select {
+  color-scheme: dark;
   font-family: $font-family-input;
+}
+
+input,
+textarea,
+select {
+  &::placeholder {
+    color: $color-text-muted;
+    opacity: 1;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: $color-text-primary;
+
+  box-shadow:
+    0
+    0
+    0
+    1000px
+    $color-bg-elevated
+    inset;
+
+  caret-color: $color-text-primary;
 }
 
 button {
@@ -39,6 +71,12 @@ button {
   background: transparent;
 }
 
+:focus-visible {
+  outline: 3px solid rgba($color-accent-primary, 0.58);
+  outline-offset: 3px;
+}
+
 ::selection {
-  background: rgba($color-accent-primary, 0.18);
+  color: $color-text-primary;
+  background: rgba($color-accent-primary, 0.34);
 }

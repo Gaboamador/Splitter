@@ -84,7 +84,7 @@
   min-height: 44px;
   padding: $space-sm $space-md;
 
-  color: #ffffff;
+  color: $color-accent-primary-contrast;
   font-weight: $font-weight-bold;
   white-space: nowrap;
 
@@ -225,7 +225,7 @@
   width: 40px;
   height: 40px;
 
-  color: #ffffff;
+  color: $color-accent-secondary-contrast;
   font-weight: $font-weight-bold;
   text-transform: uppercase;
 
@@ -545,7 +545,7 @@
     }
 
     &:first-child {
-      color: #ffffff;
+      color: $color-accent-secondary-contrast;
       background: $color-accent-secondary;
     }
 

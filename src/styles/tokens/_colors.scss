@@ -1,25 +1,69 @@
-$color-bg-page: #f6f7fb;
-$color-bg-elevated: #ffffff;
-$color-bg-elevated-2: #f1f3f7;
-$color-bg-overlay: rgba(15, 23, 42, 0.48);
+// ----------------------------------
+// Fondos
+// ----------------------------------
 
-$color-border: #d9dee8;
-$color-border-strong: #b8c0d0;
+$color-bg-page: #080d18;
+$color-bg-elevated: #101827;
+$color-bg-elevated-2: #182235;
+$color-bg-overlay: rgba(2, 6, 15, 0.76);
 
-$color-text-primary: #111827;
-$color-text-secondary: #4b5563;
-$color-text-muted: #6b7280;
-$color-text-disabled: #9ca3af;
+// ----------------------------------
+// Bordes
+// ----------------------------------
 
-$color-accent-primary: #2563eb;
-$color-accent-secondary: #14b8a6;
-$color-accent-warm: #f97316;
-$color-accent-warm-soft: #ffedd5;
-$color-accent-variant: #7c3aed;
+$color-border: #27344a;
+$color-border-strong: #3b4b66;
 
-$color-success: #16a34a;
-$color-danger: #dc2626;
-$color-warning: #d97706;
-$color-info: #0284c7;
+// ----------------------------------
+// Textos
+// ----------------------------------
+
+$color-text-primary: #f8fafc;
+$color-text-secondary: #c0cada;
+$color-text-muted: #8d9ab0;
+$color-text-disabled: #647087;
+
+// ----------------------------------
+// Identidad de marca
+// ----------------------------------
+
+$color-accent-primary: #4f8cff;
+$color-accent-primary-hover: #6b9fff;
+$color-accent-primary-active: #3f7be8;
+$color-accent-primary-contrast: #07111f;
+
+$color-accent-secondary: #2dd4bf;
+$color-accent-secondary-hover: #5eead4;
+$color-accent-secondary-active: #20bda9;
+$color-accent-secondary-contrast: #071512;
+
+$color-accent-warm: #fb923c;
+$color-accent-warm-hover: #fdba74;
+$color-accent-warm-active: #f97316;
+$color-accent-warm-soft: #42210e;
+$color-accent-warm-contrast: #1c0d03;
+
+$color-accent-variant: #a78bfa;
+$color-accent-variant-contrast: #160d29;
+
+// ----------------------------------
+// Estados semánticos
+// ----------------------------------
+
+$color-success: #4ade80;
+$color-success-contrast: #07150c;
+
+$color-danger: #fb7185;
+$color-danger-contrast: #25070d;
+
+$color-warning: #fbbf24;
+$color-warning-contrast: #1c1202;
+
+$color-info: #38bdf8;
+$color-info-contrast: #03151e;
+
+// ----------------------------------
+// Alias
+// ----------------------------------
 
 $color-card-bg: $color-bg-elevated;

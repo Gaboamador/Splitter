@@ -15,7 +15,14 @@ function AppLayout() {
     <div className={styles.layout}>
       <header className={styles.header}>
         <NavLink to="/" className={styles.brand}>
-          Splitter
+          <img
+            src="/icons/icon.svg"
+            alt=""
+            className={styles.brandIcon}
+            aria-hidden="true"
+          />
+
+          <span>plitter</span>
         </NavLink>
 
         <div className={styles.userArea}>

@@ -140,7 +140,6 @@
   min-height: 44px;
   padding: $space-sm $space-md;
 
-  color: #ffffff;
   font-weight: $font-weight-bold;
 
   border-radius: $radius-md;
@@ -160,6 +159,7 @@
 }
 
 .submitButton {
+  color: $color-accent-primary-contrast;
   background: $color-accent-primary;
 }
 
@@ -191,5 +191,8 @@
 
 .deleteButton {
   justify-self: start;
+
+  color: $color-danger-contrast;
+
   background: $color-danger;
 }
